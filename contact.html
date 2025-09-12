@@ -54,7 +54,7 @@
 	<br>
 	<hr>
 
-	<form>
+	<form action="index.html" target="_self" method="post" autocomplete="off" >
 
 		<label for="email"> Correo Electrónico:</label>
 		<input type="email" name="email" value="diegoemiln_23@alu.uabcs.mx"
@@ -62,12 +62,33 @@
 
 		<br><br>
 
+		<label for="">
+			Contraseña:
+		</label>
+		<input type="password" name="">
+
+		<br><br>
+
+		<label for="">
+			Seleccione una Opción:
+		</label>
+		<select name="" id="">
+			<option value="">
+				Opción 1
+			</option>
+			<option value="">
+				Opción 2
+			</option>
+		</select>
+
+		<br><br>
+
 		<label for="nombre">
 			Ingrese su nombre:
 		</label>
-		<input type="text" name="name" id="nombre" autofocus value="" minlength="5" maxlength="15" 
-		size="30" pattern="[A-Zz-A] {15}"
-		title="Solo quince letras">
+		<input type="text" name="name" id="nombre" autofocus value="" minlength="3" maxlength="15" 
+		size="30" required pattern="[A-Za-z] {3}"
+		title="Solo 3 letras">
 
 		<br>
 		<br>
@@ -114,10 +135,36 @@
 		<br>
 		<br>
 
+		<label for="">
+			Ingrese su mensaje:
+		</label>
+		<textarea name="" id="" 
+		placeholder="Ingresa tus Inquietudes"></textarea>
+
+		<br><br>
+
+		<input type="color">
+		<input type="date">
+		<input type="datetime">
+		<input type="file">
+		<input type="hidden" name="action" value="99">
+		<input type="reset">
+		
+		
+
+		<br><br>
+
 		<input type="submit" name="submit" value="Guardar">
 
 		<br>
 		<br>
+
+		
+		<button type="submit">
+			Enviar Datos 
+		</button>
+
+		<br><br>
 
 		<input type="button" name="" value="Hola">
 
