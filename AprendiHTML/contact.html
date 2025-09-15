@@ -1,177 +1,178 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>
-			Hola
-		</title>
-	</head>
-	<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hola</title>
+  </head>
+  <body>
+    <header>
+      <h1>Hola Usuarios</h1>
+    </header>
 
-		<header>
-			<h1>
-            Hola Usuarios
-        	</h1>
+    <nav>
+      <a href="index.html"> Regresar al Home </a>
+    </nav>
 
-		</header>
-        
-		<nav>
-			<a href="index.html">
-            Regresar al Home
-        	</a>
-		</nav>
+    <br />
 
-		
+    <img
+      width="100"
+      alt="Norra 2025"
+      title="Imagen de la carrera Norra 1000 2025 en la 
+		zona de la conquista agraria"
+      src="../assets/img/test.JPG"
+    />
 
-
-		<br>
-
-		 <img width="100" alt="Norra 2025"
-		title="Imagen de la carrera Norra 1000 2025 en la 
-		zona de la conquista agraria" src="../assets/img/test.JPG" > 
-
-		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11506.685287446526!2d-110.30441471579974!3d24.
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11506.685287446526!2d-110.30441471579974!3d24.
 		181347516350908!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86afd5005913f839%3A0xf856ac068f0ad390!2sEl%20Manglar%20Trail%20by%20CRSC!5e1!
-		3m2!1ses!2smx!4v1757386182152!5m2!1ses!2smx" 
-		width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		3m2!1ses!2smx!4v1757386182152!5m2!1ses!2smx"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
 
+    <br />
 
-		<br>
+    <div>
+      <a href="mailto:emilianoabaroa@hotmail.com"> Contacto </a>
 
-	<div>
-		<a href="mailto:emilianoabaroa@hotmail.com">
-			Contacto
-		</a>
+      <br />
 
-		<br>
+      <a href="tel:6122172060"> LLamar </a>
+    </div>
 
-		<a href="tel:6122172060">
-			LLamar
-		</a>
-	</div>
+    <br />
+    <hr />
 
-	<br>
-	<hr>
+    <form action="index.html" target="_self" method="post" autocomplete="off">
+      <label for="email"> Correo Electrónico:</label>
+      <input
+        type="email"
+        name="email"
+        value="diegoemiln_23@alu.uabcs.mx"
+        size="30"
+        readonly
+      />
 
-	<form action="index.html" target="_self" method="post" autocomplete="off" >
+      <br /><br />
 
-		<label for="email"> Correo Electrónico:</label>
-		<input type="email" name="email" value="diegoemiln_23@alu.uabcs.mx"
-		size="30" readonly>
+      <label for=""> Contraseña: </label>
+      <input type="password" name="" />
 
-		<br><br>
+      <br /><br />
 
-		<label for="">
-			Contraseña:
-		</label>
-		<input type="password" name="">
+      <label for=""> Seleccione una Opción: </label>
+      <select name="" id="">
+        <option value="">Opción 1</option>
+        <option value="">Opción 2</option>
+      </select>
 
-		<br><br>
+      <br /><br />
 
-		<label for="">
-			Seleccione una Opción:
-		</label>
-		<select name="" id="">
-			<option value="">
-				Opción 1
-			</option>
-			<option value="">
-				Opción 2
-			</option>
-		</select>
+      <label for="nombre"> Ingrese su nombre: </label>
+      <input
+        type="text"
+        name="name"
+        id="nombre"
+        autofocus
+        value=""
+        minlength="3"
+        maxlength="15"
+        size="30"
+        required
+        pattern="[A-Za-z] {3}"
+        title="Solo 3 letras"
+      />
 
-		<br><br>
+      <br />
+      <br />
 
-		<label for="nombre">
-			Ingrese su nombre:
-		</label>
-		<input type="text" name="name" id="nombre" autofocus value="" minlength="3" maxlength="15" 
-		size="30" required pattern="[A-Za-z] {3}"
-		title="Solo 3 letras">
+      <label for="lastname"> Ingrese su apellido: </label>
+      <input
+        type="text"
+        name="lastname"
+        id="lastname"
+        placeholder="Nuñez Abaroa"
+        value=""
+        minlength="5"
+        maxlength="15"
+        required
+        disabled
+        size="30"
+      />
 
-		<br>
-		<br>
+      <br />
+      <br />
 
-		<label for="lastname">
-			Ingrese su apellido:
-		</label>
-		<input type="text" name="lastname" id="lastname" placeholder="Nuñez Abaroa" value=""
-		minlength="5" maxlength="15" required disabled size="30">
-		
+      <label for="phone"> Teléfono: </label>
+      <input type="number" min="5" max="20" step="2" name="phone" value="" />
 
-		<br>
-		<br>
+      <br /><br />
 
-		<label for="phone"> Teléfono: </label>
-		<input type="number" min="5" max="20" step="2" name="phone" value="" >
+      <label for="gender"> Género: </label>
 
-		<br><br>
+      <label> Mujer </label>
+      <input type="radio" name="gender" id="gender" value="Mujer" />
 
-		<label for="gender">
-			Género:
-		</label>
+      <label> Hombre </label>
+      <input type="radio" name="gender" id="gender" value="Hombre" />
 
-		<label> Mujer </label>
-		<input type="radio" name="gender" id="gender" value="Mujer">
+      <br />
+      <br />20
 
-		<label> Hombre </label>
-		<input type="radio" name="gender" id="gender" value="Hombre">
+      <label for="preferences"> Preferencias: </label>
 
-		<br>
-		<br>20
+      <label> Pizza </label>
+      <input
+        type="checkbox"
+        name="preferences"
+        id="preferences"
+        value="Pizza"
+      />
 
-		<label for="preferences"> Preferencias: </label>
+      <label> Sushi </label>
+      <input
+        type="checkbox"
+        name="preferences"
+        id="preferences"
+        value="Sushi "
+      />
 
-		<label> Pizza </label>
-		<input type="checkbox" name="preferences" id="preferences" value="Pizza">
+      <label> Mole </label>
+      <input type="checkbox" name="preferences" id="preferences" value="Mole" />
 
-		<label> Sushi </label>
-		<input type="checkbox" name="preferences" id="preferences" value="Sushi ">
+      <br />
+      <br />
 
-		<label> Mole </label>
-		<input type="checkbox" name="preferences" id="preferences" value="Mole">
+      <label for=""> Ingrese su mensaje: </label>
+      <textarea name="" id="" placeholder="Ingresa tus Inquietudes"></textarea>
 
-		<br>
-		<br>
+      <br /><br />
 
-		<label for="">
-			Ingrese su mensaje:
-		</label>
-		<textarea name="" id="" 
-		placeholder="Ingresa tus Inquietudes"></textarea>
+      <input type="color" />
+      <input type="date" />
+      <input type="datetime" />
+      <input type="file" />
+      <input type="hidden" name="action" value="99" />
+      <input type="reset" />
 
-		<br><br>
+      <br /><br />
 
-		<input type="color">
-		<input type="date">
-		<input type="datetime">
-		<input type="file">
-		<input type="hidden" name="action" value="99">
-		<input type="reset">
-		
-		
+      <input type="submit" name="submit" value="Guardar" />
 
-		<br><br>
+      <br />
+      <br />
 
-		<input type="submit" name="submit" value="Guardar">
+      <button type="submit">Enviar Datos</button>
 
-		<br>
-		<br>
+      <br /><br />
 
-		
-		<button type="submit">
-			Enviar Datos 
-		</button>
-
-		<br><br>
-
-		<input type="button" name="" value="Hola">
-
-	</form>
-
-
-
-	</body>
+      <input type="button" name="" value="Hola" />
+    </form>
+  </body>
 </html>
--->
