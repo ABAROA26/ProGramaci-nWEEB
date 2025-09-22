@@ -1,3 +1,7 @@
+/*body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}*/
+
 #ir_contacto {
   background-color: bisque;
 }
@@ -12,7 +16,46 @@ p {
 .bg-dark {
   background-color: cadetblue;
 }
+p:hover {
+  background-color: deeppink;
+}
 
 a:hover {
-  background-color: beige;
+  background-color: darkolivegreen;
+}
+
+p strong {
+  background-color: aliceblue;
+}
+p::first-letter {
+  color: crimson;
+  font-size: 50;
+}
+li:first-child {
+  color: brown;
+}
+li:last-child {
+  color: blueviolet;
+}
+
+/* Contacto */
+
+#label_email {
+  font-weight: 600;
+}
+
+.label_generic {
+  text-transform: uppercase;
+}
+
+.post {
+  text-align: right;
+}
+
+.label_list {
+  text-decoration: overline;
+}
+
+.title_4 {
+  text-shadow: darkcyan;
 }
