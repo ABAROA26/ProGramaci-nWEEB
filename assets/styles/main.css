@@ -40,6 +40,29 @@ li:last-child {
 
 /* Contacto */
 
+@font-face {
+  font-family: "Varsity Regular";
+  src: url(../fonts/varsity_regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+.entrada {
+  font-family: "Varsity Regular";
+}
+
+.parrafo {
+  text-align: right;
+}
+
+.label_email {
+  text-transform: uppercase;
+}
+
+.name {
+  text-shadow: 2px 4px 2px blueviolet;
+}
+
 #label_email {
   font-weight: 600;
 }
@@ -53,7 +76,7 @@ li:last-child {
 }
 
 .label_list {
-  text-decoration: overline;
+  text-decoration: underline;
 }
 
 .title_4 {
