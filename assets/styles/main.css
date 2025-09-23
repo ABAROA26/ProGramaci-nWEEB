@@ -53,6 +53,8 @@ li:last-child {
 
 .parrafo {
   text-align: right;
+
+  margin: 50px;
 }
 
 .label_email {
@@ -81,4 +83,39 @@ li:last-child {
 
 .title_4 {
   text-shadow: darkcyan;
+}
+
+.apellido {
+  width: 5px;
+  border: 15px solid green;
+  padding: 5px;
+  margin: 5px;
+}
+
+.post {
+  border: 20px;
+  border-style: groove;
+  border-color: grey;
+  border-radius: 30px;
+}
+
+.title_3 {
+  border: 20px;
+  border-style: inset;
+  border-color: cadetblue;
+  border-radius: 25px;
+}
+
+td {
+  background-color: beige;
+
+  padding: 20px, 10px;
+}
+
+.margin {
+  margin: 50px;
+}
+
+img {
+  width: 50%;
 }
