@@ -10,14 +10,19 @@ h1 {
 }
 
 p {
-  background-color: aquamarine;
+  background-color: burlywood;
 }
 
-.bg-dark {
+/*.bg-dark {
   background-color: cadetblue;
-}
+}*/
+
 p:hover {
-  background-color: deeppink;
+  background-color: chocolate;
+}
+
+a {
+  display: block;
 }
 
 a:hover {
@@ -118,4 +123,12 @@ td {
 
 img {
   width: 50%;
+}
+
+#bg_image {
+  background-image: url("../img/IMG_3623.JPG");
+  background-image: url("../img/hipopotamo.png");
+  background-position: center;
+  background-size: 64px;
+  /* background-repeat: no-repeat;*/
 }
