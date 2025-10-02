@@ -122,7 +122,7 @@ td {
 }
 
 img {
-  width: 10%;
+  width: 25%;
 }
 
 #bg_image {
@@ -181,4 +181,47 @@ img {
 .footer_grid {
   grid-column-start: 1;
   grid-column-end: 4;
+}
+
+.flex_container {
+  display: flex;
+  background-color: blueviolet;
+  justify-content: center;
+  /*flex-direction: column;*/
+}
+
+.flex_container div {
+  background-color: burlywood;
+  margin: 10px;
+  padding: 20px;
+  font-size: 24px;
+}
+
+@media print and (orientation: portrait) {
+  .my_photo {
+    display: none;
+  }
+
+  blockquote {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .my_photo {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .my_photo {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .my_photo {
+    width: 100%;
+    background-color: antiquewhite;
+  }
 }
