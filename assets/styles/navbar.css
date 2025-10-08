@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_container {
+  width: 100%;
+  color: antiquewhite;
+}
+
+.nav {
+  background-color: bisque;
+  width: 100%;
+}
+
+.menus {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  color: black;
+}
