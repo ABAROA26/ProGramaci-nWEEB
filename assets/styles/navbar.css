@@ -28,6 +28,7 @@ body {
 
 .logo img {
   height: 100px;
+  width: 100px;
 }
 
 .menus {
@@ -40,6 +41,7 @@ body {
   text-decoration: none;
   color: black;
   font-weight: 500;
+  font-size: 20px;
   padding: 5px;
   border-radius: 4px;
   margin-bottom: 20px;
@@ -65,7 +67,7 @@ body {
 
   .menus li a {
     display: block;
-    padding: 1px;
+    padding: 25 px;
     border: 1px solid #ddd;
   }
 }
@@ -81,7 +83,7 @@ body {
   }
 
   .menus li a {
-    padding: 1px;
-    font-size: 1px;
+    font-size: 35 px;
+    padding: 20px;
   }
 }
