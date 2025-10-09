@@ -4,33 +4,21 @@
   box-sizing: border-box;
 }
 
+body {
+  background: gray;
+}
+
 .main_container {
   width: 100%;
-  background-color: rgb(197, 197, 235);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
-  padding: 10px 0;
-  z-index: 10;
+  height: 60px;
 }
 
 .navbar {
-  max-width: 1000px;
-  margin: auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
-}
-
-.logo > img {
-  width: 80px;
-  height: auto;
-}
-
-.menus > ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
+  align-items: center;
+  padding: 15px;
+  background-color: aquamarine;
 }
 
 .logo {
@@ -38,50 +26,62 @@
   align-items: center;
 }
 
-.menus > ul > li > a {
+.logo img {
+  height: 100px;
+}
+
+.menus {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.menus li a {
   text-decoration: none;
-  color: #111;
-  font-size: 18px;
+  color: black;
   font-weight: 500;
-  transition: color 0.3s;
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 20px;
 }
 
-.menus > ul > li > a:hover {
-  color: rgb(100, 100, 235);
-  text-decoration: underline;
-}
-
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 15px;
+    padding: 1px;
   }
 
-  .logo {
-    margin-bottom: 10px;
-  }
-
-  .menus > ul {
+  .menus {
     flex-direction: column;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 1px;
+    width: 100%;
+    margin-top: 1px;
+    text-align: center;
   }
 
-  .menus > ul > li > a {
-    font-size: 20px;
+  .menus li {
+    width: 100%;
+  }
+
+  .menus li a {
+    display: block;
+    padding: 1px;
+    border: 1px solid #ddd;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .menus > ul {
-    flex-direction: column;
-    gap: 15px;
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1px;
   }
 
-  .menus > ul > li > a {
-    font-size: 16px;
+  .logo img {
+    height: 35px;
+    margin-bottom: 30px;
+  }
+
+  .menus li a {
+    padding: 1px;
+    font-size: 1px;
   }
 }
