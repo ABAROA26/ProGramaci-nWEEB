@@ -58,28 +58,28 @@ button:active {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-#clear,
-#ce,
-#between,
-#por,
-#rest,
-#sum,
-#equal {
+.clear,
+.ce,
+.between,
+.por,
+.rest,
+.sum,
+.equal {
   background: #7a756f;
   color: #fff;
 }
 
-#clear:hover,
-#ce:hover,
-#between:hover,
-#por:hover,
-#rest:hover,
-#sum:hover,
-#equal:hover {
+.clear:hover,
+.ce:hover,
+.between:hover,
+.por:hover,
+.rest:hover,
+.sum:hover,
+.equal:hover {
   background: #8a857f;
 }
 
-#equal {
+.equal {
   grid-row: span 2;
 }
 
