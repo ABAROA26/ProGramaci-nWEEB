@@ -51,7 +51,7 @@ button {
 }
 
 button:hover {
-  background: #e5dfd3;
+  background: #808080;
 }
 
 button:active {
@@ -76,7 +76,7 @@ button:active {
 .rest:hover,
 .sum:hover,
 .equal:hover {
-  background: #8a857f;
+  background: #a52a2a;
 }
 
 .equal {
