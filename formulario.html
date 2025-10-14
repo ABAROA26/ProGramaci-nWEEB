@@ -12,70 +12,66 @@
   </head>
   <body>
     <div class="form_container">
+      <h1>Registration</h1>
       <form action="formulario.html" method="get">
-        <label for="">Nombre(S):</label>
+        <!-- <label for="">Nombre(S):</label> -->
         <input
           type="text"
           name="name"
-          placeholder="Escribe Aqui"
+          placeholder="Enter your name"
           onkeypress=" return onlyLetters(event)"
           required
         />
 
-        <br /><br />
-        <label for="">Apellido(S):</label>
+        <!--  <label for="">Apellido(S):</label> -->
         <input
           type="text"
           name="lastname"
-          placeholder="Escribe Aqui"
+          placeholder="Enter your lastname"
           onkeypress="return onlyLetters(event)"
           required
         />
 
-        <br /><br />
-
-        <label for="">Correo:</label>
+        <!-- <label for="">Correo:</label>  -->
         <input
           type="text"
           name="mail"
-          placeholder="Escribe Aqui"
+          placeholder="Enter your email"
           onkeypress="return onlyEmail(email)"
           required
         />
 
-        <br /><br />
-        <label for="">Telefono:</label>
+        <!--  <label for="">Telefono:</label> -->
         <input
           type="text"
           name="phone"
-          placeholder="Escribe Aqui"
+          placeholder="Enter your phone"
           onkeypress="return onlyNumbers(event)"
           required
         />
 
-        <br /><br />
-
-        <label for="">Genero:</label>
-        <select name="gender" id="gender" onkeypress="return validateSelect">
+        <!--  <label for="">Genero:</label> -->
+        <select
+          name="gender"
+          id="gender"
+          onkeypress="return validateSelect"
+          required
+        >
           <option value="Masculino">Masculino</option>
           <option value="Femenino">Femenino</option>
           <option value="Otro">Otro</option>
         </select>
 
-        <br /><br />
-
-        <label for="">Biografia:</label>
+        <!--  <label for="">Biografia:</label> -->
         <textarea
           name="biography"
           id="biography"
           cols="25"
           rows="3"
-          placeholder="Escribe Aqui"
+          placeholder="Enter your biography"
           onkeypress="return onlyLetters(event)"
           required
         ></textarea>
-
-        <br /><br />
 
         <button type="submit">Enviar</button>
       </form>
