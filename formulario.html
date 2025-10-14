@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/styles/formulario.css"
+    />
+  </head>
+  <body>
+    <div class="form_container">
+      <form action="formulario.html" method="get">
+        <label for="">Nombre(S):</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Escribe Aqui"
+          onkeypress=" return onlyLetters(event)"
+          required
+        />
+
+        <br /><br />
+        <label for="">Apellido(S):</label>
+        <input
+          type="text"
+          name="lastname"
+          placeholder="Escribe Aqui"
+          onkeypress="return onlyLetters(event)"
+          required
+        />
+
+        <br /><br />
+
+        <label for="">Correo:</label>
+        <input
+          type="text"
+          name="mail"
+          placeholder="Escribe Aqui"
+          onkeypress="return onlyEmail(email)"
+          required
+        />
+
+        <br /><br />
+        <label for="">Telefono:</label>
+        <input
+          type="text"
+          name="phone"
+          placeholder="Escribe Aqui"
+          onkeypress="return onlyNumbers(event)"
+          required
+        />
+
+        <br /><br />
+
+        <label for="">Genero:</label>
+        <select name="gender" id="gender" onkeypress="return validateSelect">
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+          <option value="Otro">Otro</option>
+        </select>
+
+        <br /><br />
+
+        <label for="">Biografia:</label>
+        <textarea
+          name="biography"
+          id="biography"
+          cols="25"
+          rows="3"
+          placeholder="Escribe Aqui"
+          onkeypress="return onlyLetters(event)"
+          required
+        ></textarea>
+
+        <br /><br />
+
+        <button type="submit">Enviar</button>
+      </form>
+
+      <br />
+    </div>
+    <script src="assets/js/formulario.js"></script>
+  </body>
+</html>
