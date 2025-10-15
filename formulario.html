@@ -13,7 +13,7 @@
   <body>
     <div class="form_container">
       <h1>Registration</h1>
-      <form action="formulario.html" method="get">
+      <form onsubmit="return validateForm()" novalidate>
         <!-- <label for="">Nombre(S):</label> -->
         <input
           type="text"
@@ -34,10 +34,11 @@
 
         <!-- <label for="">Correo:</label>  -->
         <input
+          id="email"
           type="text"
           name="mail"
           placeholder="Enter your email"
-          onkeypress="return onlyEmail(email)"
+          onblur="checkEmail(this.value)"
           required
         />
 
@@ -51,12 +52,8 @@
         />
 
         <!--  <label for="">Genero:</label> -->
-        <select
-          name="gender"
-          id="gender"
-          onkeypress="return validateSelect"
-          required
-        >
+        <select name="gender" id="gender" onchange="validateSelect()" required>
+          <option value="">Select your gender</option>
           <option value="Masculino">Masculino</option>
           <option value="Femenino">Femenino</option>
           <option value="Otro">Otro</option>

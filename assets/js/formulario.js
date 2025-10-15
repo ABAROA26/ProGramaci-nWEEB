@@ -88,7 +88,7 @@ function onlyEmail(email) {
 }
 
 function validateSelect() {
-  const selectElement = document.getElementById("mySelect");
+  const selectElement = document.getElementById("gender");
   const errorMessage = document.getElementById("selectError");
 
   if (selectElement.value === "") {
@@ -99,4 +99,29 @@ function validateSelect() {
     alert("Seleccion Valida: " + selectElement.value);
     return true;
   }
+}
+
+function checkEmail(value) {
+  if (!onlyEmail(value)) {
+    alert("Por favor ingresa un correo válido.");
+    return false;
+  }
+  return true;
+}
+
+function validateForm() {
+  const email = document.getElementById("email").value.trim();
+  const gender = document.getElementById("gender").value;
+
+  if (!onlyEmail(email)) {
+    alert("Por favor ingresa un correo válido.");
+    return false;
+  }
+
+  if (gender === "") {
+    alert("Selecciona un género antes de continuar.");
+    return false;
+  }
+
+  return valid;
 }

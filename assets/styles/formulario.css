@@ -1,5 +1,6 @@
 body {
-  background-color: cornflowerblue;
+  background-image: url("../img/ampudia.jpg");
+  background-size: cover;
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: left;
@@ -25,7 +26,6 @@ h1 {
   color: #333;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
-  color: black;
 }
 
 input {
@@ -60,7 +60,7 @@ textarea {
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
-  resize: vertical;
+  resize: none;
   max-width: 100%;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
