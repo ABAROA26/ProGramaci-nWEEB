@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To Do Lis</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles/todo.css" />
+  </head>
+  <body>
+    <div class="todo_container">
+      <h1>Mi Lista de Tareas</h1>
+      <form action="" onsubmit="return getTask()">
+        <label> Tarea </label>
+        <input
+          type="text"
+          name="name"
+          id="task_name"
+          placeholder="Escríbe la tarea"
+          onpaste="return false"
+          required
+        />
+
+        <button type="submit">Agregar Tarea</button>
+      </form>
+
+      <div class="todo_list" id="todo_list"></div>
+    </div>
+
+    <script src="assets/js/todo.js"></script>
+  </body>
+</html>
