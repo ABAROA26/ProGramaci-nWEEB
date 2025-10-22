@@ -26,6 +26,19 @@
       <div class="todo_list" id="todo_list"></div>
     </div>
 
+    <div class="edit_container">
+      <form
+        id="edit_form"
+        style="display: none"
+        onsubmit="return saveEditedTask(event)"
+      >
+        <label>Editar tarea</label>
+        <input type="text" id="edit_task_name" required />
+        <input type="hidden" id="edit_task_index" />
+        <button type="submit">Guardar cambios</button>
+      </form>
+    </div>
+
     <script src="assets/js/todo.js"></script>
   </body>
 </html>

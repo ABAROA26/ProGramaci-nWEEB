@@ -31,6 +31,7 @@ function updateTodoList() {
             ${task.text}
           
         </div>
+         <button id=editar onclick="editTask(${index})">Editar</button>
         <button onclick="deleteTask(event, ${index})"
                 >
           Eliminar
@@ -54,6 +55,38 @@ function deleteTask(event, index) {
   const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
   tasks.splice(index, 1);
   localStorage.setItem("tasks", JSON.stringify(tasks));
+  updateTodoList();
+}
+
+function editTask(index) {
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  const form = document.getElementById("edit_form");
+  const input = document.getElementById("edit_task_name");
+  const hiddenIndex = document.getElementById("edit_task_index");
+
+  input.value = tasks[index].text;
+  hiddenIndex.value = index;
+
+  form.style.display = "block";
+  input.focus();
+}
+
+function saveEditedTask(event) {
+  event.preventDefault();
+
+  const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+  const index = document.getElementById("edit_task_index").value;
+  const newText = document.getElementById("edit_task_name").value.trim();
+
+  if (newText === "") return false;
+
+  tasks[index].text = newText;
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+
+  document.getElementById("edit_form").style.display = "none";
+  document.getElementById("edit_task_name").value = "";
+  document.getElementById("edit_task_index").value = "";
+
   updateTodoList();
 }
 

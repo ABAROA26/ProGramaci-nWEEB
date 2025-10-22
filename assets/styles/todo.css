@@ -105,3 +105,28 @@ button[type="submit"]:hover {
 .todo_list button:hover {
   background-color: #da190b;
 }
+
+#editar {
+  padding: 8px 15px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.edit_container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+#edit_form {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
