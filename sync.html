@@ -2,30 +2,60 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Pokédex Trainer Hub</title>
+    <link rel="stylesheet" href="assets/styles/sync.css">
 	
 </head>
 <body>
 
-	<div class="sync_container">
-		
-		<button onclick="getPokeData()">
-			Consultar información
-		</button>
+	<div class="container">
+        <h1>Pokédex Trainer Hub</h1>
 
-    <input type="text" id="poke_input" placeholder="Ingrese el nombre o ID del Pokémon" weight="50">
-   
+        <div id="registro-section" class="section">
+            <h2>Registro de Entrenador</h2>
+            <form id="trainer-form">
+                <div class="form-group">
+                    <label for="trainerName">Nombre de Entrenador:</label>
+                    <input type="text" id="trainerName" required>
+                    <div class="error-message" id="error-name">Mínimo 3 caracteres</div>
+                </div>
 
+                <div class="form-group">
+                    <label for="email">Email de Entrenador:</label>
+                    <input type="email" id="email" required>
+                    <div class="error-message" id="error-email">Email inválido</div>
+                </div>
 
-		<div class="sync_list" id="poke_data">
-			
-		</div> 
-		<h1 id="poke_name">
-			
-		</h1>
+                <div class="form-group">
+                    <label for="startDate">Fecha de Inicio de Aventura:</label>
+                    <input type="date" id="startDate" required>
+                    <div class="error-message" id="error-date">La fecha no puede ser anterior a hoy</div>
+                </div>
 
-	</div> 
-	
-	<script src="assets/js/sync.js"></script>
+                <button type="submit">Registrar Entrenador</button>
+            </form>
+        </div>
+
+        <div id="trainer-section" class="section hidden">
+            <div class="trainer-info" id="trainer-info"></div>
+
+            <h2>Buscar y Capturar Pokémon</h2>
+            <div class="search-box">
+                <input type="text" id="poke-search" placeholder="Nombre del Pokémon (ej: pikachu)">
+                <button onclick="buscarPokemon()">Buscar</button>
+            </div>
+
+            <div id="pokemon-preview" class="pokemon-preview">
+                <img id="preview-img" src="" alt="">
+                <h3 id="preview-name"></h3>
+                <button onclick="añadirAlEquipo()">Añadir al Equipo</button>
+            </div>
+
+            <h2>Mi Equipo Pokémon</h2>
+            <div id="equipo-list" class="equipo-list"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/sync.js"></script>
 </body>
 </html>
