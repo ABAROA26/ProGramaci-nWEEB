@@ -1,61 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="assets/styles/sync.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>PokéStudent</h1>
+      <p class="muted"></p>
+    </header>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Pokédex Trainer Hub</title>
-    <link rel="stylesheet" href="assets/styles/sync.css">
-	
-</head>
-<body>
+    <main class="wrap">
+      <section class="col left" id="registro">
+        <h2>Registro de Entrenador</h2>
+        <form id="formReg">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" type="text" placeholder="ej: Ash" required />
+          <div id="errNombre" class="help hidden">Mínimo 3 caracteres</div>
 
-	<div class="container">
-        <h1>Pokédex Trainer Hub</h1>
+          <label for="correo">Email</label>
+          <input
+            id="correo"
+            type="email"
+            placeholder="ej: ash@poke.com"
+            required
+          />
+          <div id="errEmail" class="help hidden">Email inválido</div>
 
-        <div id="registro-section" class="section">
-            <h2>Registro de Entrenador</h2>
-            <form id="trainer-form">
-                <div class="form-group">
-                    <label for="trainerName">Nombre de Entrenador:</label>
-                    <input type="text" id="trainerName" required>
-                    <div class="error-message" id="error-name">Mínimo 3 caracteres</div>
-                </div>
+          <label for="inicio">Fecha de inicio</label>
+          <input id="inicio" type="date" required />
+          <div id="errDate" class="help hidden">
+            La fecha debe ser hoy o posterior
+          </div>
 
-                <div class="form-group">
-                    <label for="email">Email de Entrenador:</label>
-                    <input type="email" id="email" required>
-                    <div class="error-message" id="error-email">Email inválido</div>
-                </div>
+          <div class="actions">
+            <button type="submit">Guardar</button>
+            <button type="button" id="btnReset" class="btn-outline">
+              Reset
+            </button>
+          </div>
+        </form>
 
-                <div class="form-group">
-                    <label for="startDate">Fecha de Inicio de Aventura:</label>
-                    <input type="date" id="startDate" required>
-                    <div class="error-message" id="error-date">La fecha no puede ser anterior a hoy</div>
-                </div>
+        <div id="infoBox" class="trainer-card hidden">
+          <strong id="tNombre"></strong>
+          <div class="muted" id="tEmail"></div>
+          <div class="muted" id="tInicio"></div>
+        </div>
+      </section>
 
-                <button type="submit">Registrar Entrenador</button>
-            </form>
+      <section class="col right">
+        <h2>Buscar Pokémon</h2>
+        <div class="search-row">
+          <input id="qPoke" type="text" placeholder="nombre (ej: bulbasaur)" />
+          <button id="btnBuscar">Buscar</button>
         </div>
 
-        <div id="trainer-section" class="section hidden">
-            <div class="trainer-info" id="trainer-info"></div>
-
-            <h2>Buscar y Capturar Pokémon</h2>
-            <div class="search-box">
-                <input type="text" id="poke-search" placeholder="Nombre del Pokémon (ej: pikachu)">
-                <button onclick="buscarPokemon()">Buscar</button>
-            </div>
-
-            <div id="pokemon-preview" class="pokemon-preview">
-                <img id="preview-img" src="" alt="">
-                <h3 id="preview-name"></h3>
-                <button onclick="añadirAlEquipo()">Añadir al Equipo</button>
-            </div>
-
-            <h2>Mi Equipo Pokémon</h2>
-            <div id="equipo-list" class="equipo-list"></div>
+        <div id="preview" class="preview hidden" aria-live="polite">
+          <img id="imgPrev" alt="imagen" />
+          <div class="meta">
+            <div id="namePrev"></div>
+            <div class="muted" id="idPrev"></div>
+            <div><button id="btnAdd">Añadir al equipo</button></div>
+          </div>
         </div>
-    </div>
+
+        <h3>Mi Equipo</h3>
+        <div id="team" class="team-grid">
+          <div class="empty">No hay Pokémon aún</div>
+        </div>
+      </section>
+    </main>
 
     <script src="assets/js/sync.js"></script>
-</body>
+  </body>
 </html>
